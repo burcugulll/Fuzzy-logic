@@ -1,0 +1,46 @@
+[System]
+Name='BM_20_066Anfis'
+Type='sugeno'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=6
+AndMethod='prod'
+OrMethod='probor'
+ImpMethod='prod'
+AggMethod='sum'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='x1'
+Range=[-5 5]
+NumMFs=3
+MF1='mf1':'gaussmf',[1.95978331631318 0.844132221461679]
+MF2='mf2':'gaussmf',[4.96774799121793 2.01339250414511]
+MF3='mf3':'gaussmf',[2.94448960987279 4.03146977720192]
+
+[Input2]
+Name='y2'
+Range=[-5 5]
+NumMFs=2
+MF1='mf1':'gaussmf',[3.02219576952521 2.98499888376327]
+MF2='mf2':'gaussmf',[0.876793315618321 1.14572385530394]
+
+[Output1]
+Name='y'
+Range=[4 90016]
+NumMFs=6
+MF1='mf1':'constant',[-115264.480051895]
+MF2='mf2':'constant',[-31732.9049458622]
+MF3='mf3':'constant',[53956.6731286654]
+MF4='mf4':'constant',[29282.1185992613]
+MF5='mf5':'constant',[83564.8381129164]
+MF6='mf6':'constant',[-47773.4000999812]
+
+[Rules]
+1 1, 1 (1) : 1
+1 2, 2 (1) : 1
+2 1, 3 (1) : 1
+2 2, 4 (1) : 1
+3 1, 5 (1) : 1
+3 2, 6 (1) : 1
